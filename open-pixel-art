@@ -1,0 +1,10 @@
+'use strict';
+
+
+define('forum/topic/fork', ['components', 'postSelect'], function (components, postSelect) {
+	var Fork = {};
+	var forkModal;
+	var forkCommit;
+
+	Fork.init = function () {
+		$('.topic').on('click', '[component="topic/fork"]', onForkThreadClicked);
